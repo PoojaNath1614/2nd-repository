@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<title>Dream Homes</title>
+
+		<h1 id="companyName">DREAM HOMES</h1>
+		<h2 class="heading">BUY THE HOUSE OF YOUR DREAMS</h2>	
+		<h3 class="heading">Here at Dream Homes <br> We Value Your Happiness</h3>
+		<hr>
+
+	</head>
+
+	<style>
+		#companyName{
+			text-align:center;
+			font-family:brush script mt;
+			color:maroon;
+			font-size:50px;
+		}
+
+		.heading{
+			text-align:center;
+			color: black;
+			font-family:georgia;
+			
+		}
+
+		.intro{
+			text-align: center;
+			color: white;
+			background-color: green;
+			font-family:georgia;
+			
+		}
+
+		body{
+			background-image:url('bg2.jpg');
+			font-family:georgia;
+			
+		}
+
+		.form{
+			color:white;
+			font-weight:bold;
+			
+		}
+		.box{
+			border:2px solid;
+			color:dodgerBlue;
+		
+		}
+		.housetype{
+			color:black;
+		}
+		#submit{
+			tex-align:center;
+		}
+		.end{
+			color:white;
+			background-color:teal;
+			font-family:georgia;
+		}
+	</style>
+
+	<body>
+		<div class="intro">
+			<p>Choose the house you have always dreamt of with us</p>
+			<p>Contact Dream Homes through Phone No.: 123**9043 and Mail: dreamhomes1111@dmh.com </p>
+		</div>
+
+		<hr>
+
+		<div>
+			<p class="intro">"Choose the style you want and we will lead you to the home you've always wanted" </p>
+			<img style="width:19%;" src="image3.jpg">
+			<img style="width:10%;" src= "image1.jpg">
+			<img style="width:17.2%;" src="image4.jpg">
+			<img style="width:15.2%;" src="image2.jpg">
+			<img style="width:18.7%;" src="image5.jpg">
+			<img style="width:18.4%;" src="image6.jpg">
+
+			<p style="color: white;font-size:15">Fill the form below to let us know your preferesnces for your home. Once the form is submitted we will contact you at the earliest.</p>
+		</div><br>
+
+		<div class="form">
+			<label>Name:</label>
+			<input  type="text" class="box">
+			
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone number:</label>
+			<input type="number" class="box"><br><br>
+
+			<label>Home style:</label>
+
+			<label class="housetype">&nbsp;&nbsp;&nbsp Apartment</label>
+			<input type="checkbox" value="Apartment" class="ch">
+
+			<label class="housetype">&nbsp;&nbsp;&nbsp Town home</label>
+			<input type="checkbox" value="Town home" class="ch">
+
+			<label class="housetype">&nbsp;&nbsp;&nbsp Villa or Bungalow</label>
+			<input type="checkbox" value="Bungalow" class="ch">
+
+			<label class="housetype">&nbsp;&nbsp;&nbsp; Detached single-family</label>
+			<input type="checkbox" value="Detached-single family" class="ch">
+
+			<label class="housetype">&nbsp;&nbsp; Multi-family home</label>
+			<input type="checkbox" value="Multi-family home" class="ch">
+			<br><br>
+
+			<label>City of your preference:</label>
+			<input type="text" class="box" class="ch"><br><br>
+
+			<label>Size:</label>
+
+			<label class="housetype">&nbsp;&nbsp; 1BHK</label>
+			<input type="checkbox" value="1BHK" class="ch">
+
+			<label class="housetype">&nbsp;&nbsp;&nbsp;&nbsp 2BHK</label>
+			<input type="checkbox" value="2BHK" class="ch">
+
+			<label class="housetype">&nbsp;&nbsp;&nbsp;&nbsp; 3BHK</label>
+			<input type="checkbox" value="3BHK" class="ch">
+
+			<label class="housetype">&nbsp;&nbsp;&nbsp;&nbsp; 4BHK</label>
+			<input type="checkbox" value="4BHK" class="ch">
+
+			<hr>
+			
+		</div>
+		<div>
+			<button id="submit" style="text-align:center; background-color:maroon; color:white;">Submit Choices</button>
+		</div>
+		<hr>
+
+		<p class="end">For further queries feel free to contact us through the phone number and mail id shared or visit us at:</p>
+
+		<p class="end">Dream Homes, Orchid Market complex-1st Floor,<br>Square avenue, Adyar, <br>Chennai</p>
+
+		<p class="end">Open from 9:00 am to 8:30pm (Monday to Saturday) </p>
+		
+		<script>
+			let myBtn=document.getElementById("submit");
+			let myBoxData=document.getElementsByClassName("box");
+			let myCheckData= document.getElementsByClassName("ch");
+			myBtn.addEventListener('click', ()=>{
+				for(let i=0;i<myBoxData.length;i++){
+					console.log(myBoxData[i].value);
+				}
+				for(let j=0; j<myCheckData.length;j++){
+					if(myCheckData[j].checked){
+						console.log(myCheckData[j].value);
+						
+					}
+				}
+			});
+		</script>
+	
+	</body>
+
+</html>
